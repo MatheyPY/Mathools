@@ -1,1 +1,1 @@
-{"download_url":"https://github.com/MatheyPY/Mathools/releases/download/v2.2.0/MathoolsSetup.exe","package_type":"installer","version":"2.2.0","release_notes":"Ordens de serviço sendo pegas de maneira correta e limpezas de codigos antigos"}
+{"download_url":"https://github.com/MatheyPY/Mathools/releases/download/v2.2.1/MathoolsSetup.exe","package_type":"installer","version":"2.2.1","release_notes":"estruturado o modelo de logistica de maneira que possa ser gerado, concertado e gerado novamente com as coordenadas padronizadas."}
