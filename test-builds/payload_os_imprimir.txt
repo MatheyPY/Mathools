@@ -1,0 +1,20 @@
+curl 'https://centrosul.waterfy.net/api/MacroService' \
+  -H 'accept: */*' \
+  -H 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: text/x-gwt-rpc; charset=UTF-8' \
+  -b 'SESSION=MDIzOTI5NGMtZWE3NC00Y2ZmLThjOWEtNDdlN2NkODU3OTM1; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpbnRlZ3JhY2FvIiwic3ViIjoibWF0aGV1cy5wZXJlaXJhX2NvbSIsInR5cGUiOiJhY2Nlc3MiLCJpZFVzdWFyaW8iOjIxODksInVzdWFyaW8iOiJtYXRoZXVzLnBlcmVpcmFfY29tIiwiaWRsZWl0dXJpc3RhIjo1NTAwLCJpZHVuaWRhZGVuZWdvY2lvIjoxLCJub21lTGVpdHVyaXN0YSI6Ik1hdGhldXMgS2VsdmluIE1hcnF1ZXMgUGVyZWlyYSIsImlkIjoyMTg5LCJpYXQiOjE3NzU2NDU0NTgsImV4cCI6MTc3NTY5OTQ1OCwianRpIjoiZmJlMTY4M2ItNWZkMC00NGE0LWI1NzYtMDhmNDc4NWZjYTIzIn0.LAL2F0w99jMDYxBDDJx4FTrKV-BtKM8ImWLeMHUG5zw; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpbnRlZ3JhY2FvIiwic3ViIjoibWF0aGV1cy5wZXJlaXJhX2NvbSIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzc1NjQ1NDU4LCJleHAiOjE3NzU2OTk0NTgsImp0aSI6IjYxM2RmNjQzLWMyODgtNDY3Yy1iNTliLTk0NTY3NDAyNjQ4NyJ9.RsRPK0zDMxUiSxbiDwGkhVDSEwoCjC5-sq2bWnuaRRg' \
+  -H 'origin: https://centrosul.waterfy.net' \
+  -H 'priority: u=1, i' \
+  -H 'progress: 1775669995409' \
+  -H 'referer: https://centrosul.waterfy.net/' \
+  -H 'sec-ch-ua: "Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'traceparent: 00-383467c5e89b31670ccfdaae82ac6759-0f99c1a6e6e6eb66-01' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36' \
+  -H 'x-gwt-module-base: https://centrosul.waterfy.net/cf/' \
+  -H 'x-gwt-permutation: 15715D41DBB37987E18FEF7E8C13EDFB' \
+  --data-raw '7|0|5|https://centrosul.waterfy.net/cf/|A3982DE279AEA90C5635D87AA37D68E3|com.waterfy.customerfy.client.macro.MacroGWTService|imprimirPesquisaOrdemServico|I|1|2|3|4|1|5|0|'
