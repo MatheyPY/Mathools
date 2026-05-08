@@ -1,0 +1,130 @@
+# ============================================================================
+# MATHTOOLS 1.0 - Configuração Centralizada (TOML)
+# Conformidade LGPD e Segurança
+# ============================================================================
+
+[core]
+# Configurações nucleares da aplicação
+debug_mode = false
+app_version = "1.0.0"
+organization = "Itapoá Saneamento"
+timezone = "America/Sao_Paulo"
+
+[directories]
+# Diretórios de saída
+logs_dir = "logs"
+excel_dir = "planilhas_filtradas"
+reports_dir = "Relatorios_Negociacao"
+graphics_dir = "Graficos"
+csv_exports_dir = "CSV_Exportados"
+
+[logging]
+# Configuração de logging e auditoria
+level = "INFO"
+max_bytes = 5242880  # 5 MB
+backup_count = 5
+enable_audit = true
+audit_level = "INFO"
+audit_file = "logs/auditoria_LGPD.log"
+# Retention: 5 anos (1825 dias) para logs de cobrança financeira
+# Conformidade: LGPD (dados financeiros) + Lei 5.172/1966 Art. 43 (Código Tributário)
+retention_days = 1825
+# Campos que NÃO devem aparecer em logs (PII)
+pii_fields = ["password", "cpf", "email", "phone", "endereco"]
+
+[database]
+# Supabase configurações (LGPD: dados de autenticação apenas em produção)
+supabase_url = "https://zfhzlxfpxyairtsaqqxu.supabase.co"
+supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpmaHpseGZweHlhaXJ0c2FxcXh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5MTc5MDcsImV4cCI6MjA4ODQ5MzkwN30.aWLz6GMYHQK9omERMqjsWCbYpaHUxH25y1QBhsCco1E"
+secret_key = "itapoa-saneamento-mathools-producao-2026"
+jwt_expiry_hours = 8
+supabase_timeout = 7
+verify_ssl = true
+connection_retries = 3
+
+[http]
+# Configurações de retry e timeouts HTTP
+enable_retry = true
+retry_attempts = 3
+retry_backoff_factor = 1.5
+retry_status_codes = [408, 429, 500, 502, 503, 504]
+request_timeout = 30
+max_download_size_mb = 500  # 500 MB limite
+socket_timeout = 10
+
+[waterfy]
+# Integração com Waterfy GWT-RPC
+url_base = "https://centrosul.waterfy.net"
+gwt_base = "https://centrosul.waterfy.net/cf/"
+gwt_permutation = "1EDBDC3C6566DE7E4908CC04F7E43723"
+gwt_hash = "CF1CF1F31607A8FB8DFAF530F827D47C"
+unidade_operacional = "Centro Sul Saneamento"
+cidade = "ITAPOÁ"
+# Headers obrigatórios para Waterfy
+accept_language = "pt-BR,pt;q=0.9"
+
+[retry_policy]
+# Política universal de retry
+enabled = true
+max_retries = 3
+initial_delay_sec = 1.0
+max_delay_sec = 60.0
+exponential_base = 2.0
+jitter = true
+
+[circuit_breaker]
+# Circuit breaker para proteção de APIs
+enabled = true
+failure_threshold = 5
+success_threshold = 2
+timeout_sec = 60
+half_open_timeout_sec = 30
+
+[csv_schema]
+# Validação obrigatória de schema
+validate_on_load = true
+# Colunas obrigatórias (variam por macro, ver schema_validator.py)
+required_columns = []
+# Tipo de dados esperados
+expected_types = {}
+
+[security]
+# Segurança geral
+bcrypt_rounds = 12
+jwt_expiry_hours = 8
+max_login_attempts = 5
+lockout_minutes = 15
+enable_ssl_warnings = false
+
+[whatsapp_automation]
+# Automação WhatsApp
+enabled = true
+messages_per_batch = 20
+batch_interval_seconds = 3600
+min_delay_sec = 40
+max_delay_sec = 120
+cut_threshold_days = 30
+
+[features]
+# Features toggles
+enable_dashboard = true
+enable_routing = true
+enable_html_sanitization = true
+enable_timezone_awareness = true
+enable_audit_logging = true
+
+[logging.handlers]
+# Configuração granular de handlers
+[logging.handlers.console]
+enabled = true
+format = "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+
+[logging.handlers.file]
+enabled = true
+format = "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+encoding = "utf-8"
+
+[logging.handlers.audit]
+enabled = true
+format = "%(asctime)s | %(user)s | %(action)s | %(status)s | %(message)s"
+encoding = "utf-8"
