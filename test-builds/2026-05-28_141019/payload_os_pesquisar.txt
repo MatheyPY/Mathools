@@ -1,0 +1,19 @@
+curl 'https://centrosul.waterfy.net/api/OSService' \
+  -H 'accept: */*' \
+  -H 'accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'content-type: text/x-gwt-rpc; charset=UTF-8' \
+  -b 'SESSION=MDIzOTI5NGMtZWE3NC00Y2ZmLThjOWEtNDdlN2NkODU3OTM1; accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpbnRlZ3JhY2FvIiwic3ViIjoibWF0aGV1cy5wZXJlaXJhX2NvbSIsInR5cGUiOiJhY2Nlc3MiLCJpZFVzdWFyaW8iOjIxODksInVzdWFyaW8iOiJtYXRoZXVzLnBlcmVpcmFfY29tIiwiaWRsZWl0dXJpc3RhIjo1NTAwLCJpZHVuaWRhZGVuZWdvY2lvIjoxLCJub21lTGVpdHVyaXN0YSI6Ik1hdGhldXMgS2VsdmluIE1hcnF1ZXMgUGVyZWlyYSIsImlkIjoyMTg5LCJpYXQiOjE3NzU2NDU0NTgsImV4cCI6MTc3NTY5OTQ1OCwianRpIjoiZmJlMTY4M2ItNWZkMC00NGE0LWI1NzYtMDhmNDc4NWZjYTIzIn0.LAL2F0w99jMDYxBDDJx4FTrKV-BtKM8ImWLeMHUG5zw; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpbnRlZ3JhY2FvIiwic3ViIjoibWF0aGV1cy5wZXJlaXJhX2NvbSIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzc1NjQ1NDU4LCJleHAiOjE3NzU2OTk0NTgsImp0aSI6IjYxM2RmNjQzLWMyODgtNDY3Yy1iNTliLTk0NTY3NDAyNjQ4NyJ9.RsRPK0zDMxUiSxbiDwGkhVDSEwoCjC5-sq2bWnuaRRg' \
+  -H 'origin: https://centrosul.waterfy.net' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://centrosul.waterfy.net/' \
+  -H 'sec-ch-ua: "Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'traceparent: 00-d0b83c8125d746718c0c4954bcb5bcf4-09278748a5255677-01' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36' \
+  -H 'x-gwt-module-base: https://centrosul.waterfy.net/cf/' \
+  -H 'x-gwt-permutation: 15715D41DBB37987E18FEF7E8C13EDFB' \
+  --data-raw '7|0|16|https://centrosul.waterfy.net/cf/|DD19792F9E11F524610AEC77713F858C|com.waterfy.customerfy.client.gestaoservico.OSGWTService|pesquisarOrdemServico|java.util.List|com.waterfy.customerfy.shared.dto.gestaoservico.CadastroOSDTO/3301728415|java.lang.String/2004016611|java.util.ArrayList/4159755760|java.lang.Integer/3438268394||N|com.waterfy.customerfy.shared.dto.gestaoservico.CadastroOSServicoDTO/302248598|java.lang.Boolean/476441737|com.waterfy.customerfy.shared.dto.comum.ItemComboDTO/1829750149|ITAPOÁ|S|1|2|3|4|3|5|6|7|8|1|9|4|6|0|0|0|10|8|0|10|0|0|10|10|0|11|10|0|8|1|12|0|0|11|11|0|10|10|10|8|0|8|0|8|0|8|0|8|0|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|13|0|0|0|11|10|11|8|0|8|0|8|0|8|0|10|10|10|10|10|10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|10|0|11|11|10|0|10|0|8|0|10|0|10|10|10|10|0|10|10|10|10|10|10|10|10|10|10|0|0|0|0|0|10|10|11|11|13|0|0|10|10|13|0|10|10|10|10|10|11|10|10|11|10|10|11|9|-1|8|0|8|0|8|0|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|10|0|10|10|10|10|0|0|10|10|0|10|0|0|0|0|8|0|8|1|14|15|0|0|9|24|9|5|8|0|8|0|8|0|8|0|8|0|8|0|8|0|10|10|0|10|10|10|10|10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|10|10|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|-1|0|0|0|0|0|10|10|0|10|8|0|10|10|10|0|10|10|0|10|10|10|10|11|10|10|0|10|10|10|10|10|0|0|10|0|0|10|10|10|10|0|0|10|10|10|10|10|10|10|9|0|16|'
